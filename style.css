@@ -1,0 +1,714 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "heroTxt";
+  src: url(fonts/dinnext_n7.57888b0b2051a4dba7d02aad7ca64db99eca3cf1.woff2);
+}
+@font-face {
+  font-family: "2hero";
+  src: url(fonts/GolosText-Bold.woff2);
+}
+@font-face {
+  font-family: "3hero";
+  src: url(fonts/GolosText-Regular.woff2);
+}
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "3hero";
+  color: #1A1A1A;
+}
+body main {
+  position: relative;
+}
+body main nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+}
+body main nav .nav1 {
+  background-color: #1A1A1A;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-family: "2hero";
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body main nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  color: #1A1A1A;
+}
+body main nav .navbar i {
+  font-size: 1.2rem;
+}
+body main nav .navbar div:nth-child(1) {
+  display: flex;
+  gap: 1rem;
+}
+body main nav .navbar .elem {
+  width: 30%;
+}
+body main nav .navbar .elem img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .menu {
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+  padding: 0.5rem;
+  background-color: rgba(26, 26, 26, 0.3843137255);
+}
+body main .menu .inside-menu {
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+body main .menu .inside-menu .menu-list .items {
+  font-family: "2hero";
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+body main .page1 .container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+body main .page1 .container .elem1 {
+  width: 80%;
+  flex-shrink: 0;
+}
+body main .page1 .container .elem1 .img {
+  width: 100%;
+}
+body main .page1 .container .elem1 .img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+}
+body main .page1 .container .elem1 .img-info h1 {
+  padding: 1rem 0;
+  font-family: "2hero";
+  font-size: 2.5rem;
+}
+body main .page1 .container .elem1 .img-info p {
+  font-family: "3hero";
+  letter-spacing: 0.4px;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  padding-bottom: 1rem;
+}
+body main .page1 .container .elem1 .img-info a {
+  color: #1A1A1A;
+  font-size: 0.9rem;
+  font-family: "3hero";
+}
+body main .page1 .container::-webkit-scrollbar {
+  display: none;
+}
+body main .page2 {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-image: url(https://teaflowusa.com/cdn/shop/files/quiz_banner.jpg?v=1694097176&width=2200);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+body main .page2 .blur {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: rgba(26, 26, 26, 0.2784313725);
+}
+body main .page2 .blur h1 {
+  font-family: "2hero";
+  font-size: 2.5rem;
+  padding-top: 2rem;
+}
+body main .page2 .blur p {
+  font-family: "3hero";
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+body main .page2 .blur .imp {
+  font-family: "2hero";
+}
+body main .page2 .blur .btn {
+  background-color: #1A1A1A;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  margin: 1rem 0;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+body main .page3 h1 {
+  font-family: "2hero";
+  padding: 3rem 1rem;
+}
+body main .page3 p {
+  padding: 0 1rem;
+  font-family: "3hero";
+}
+body main .page3 .container-3 {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 99;
+}
+body main .page3 .container-3 .elem {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  aspect-ratio: 1/1;
+}
+body main .page3 .container-3 .elem img {
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+body main .page3 .container-3 .elem p {
+  color: white;
+  font-family: "2hero";
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+}
+body main .page3 .container-3::-webkit-scrollbar {
+  display: none;
+}
+body main .page4 h1 {
+  font-family: "2hero";
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+body main .page4 .container-4 {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+body main .page4 .container-4 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+body main .page4 .container-4::-webkit-scrollbar {
+  display: none;
+}
+body main .page4 .info {
+  padding: 1rem;
+}
+body main .page4 .info p {
+  font-family: "3hero";
+  padding: 1rem 0;
+}
+body main .page4 .info h1 {
+  text-align: left;
+  font-family: "2hero";
+  font-size: 2rem;
+  padding: 0;
+}
+body main .page4 .info .desc h4 {
+  font-family: "2hero";
+  padding: 1rem 0;
+}
+body main .page4 .info .desc p {
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+  background-color: #1A1A1A;
+  border-radius: 25px;
+  font-weight: 700;
+}
+body main .page5 {
+  padding: 1rem;
+}
+body main .page5 h4 {
+  padding: 1rem 0;
+  font-family: "3hero";
+  font-weight: 500;
+}
+body main .page5 .container-5 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body main .page5 .container-5 .elem {
+  flex-shrink: 0;
+  font-family: "3hero";
+  padding: 0.5rem 0;
+  width: 47%;
+}
+body main .page5 .container-5 .elem img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+}
+body main .page5 .container-5 .elem h2 {
+  font-family: "2hero";
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 0.5rem 0;
+}
+body main .page5 .container-5 .elem p {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+body main .page6 {
+  padding: 2rem 0;
+}
+body main .page6 .marquee {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+body main .page6 .marquee .text {
+  display: flex;
+  gap: 2rem;
+  padding: 0 3rem;
+  animation: marquee 8s linear infinite both;
+}
+body main .page6 .marquee .text h1 {
+  white-space: nowrap;
+  font-family: "2hero";
+  font-size: 10rem;
+  overflow-x: auto;
+  color: #1A1A1A;
+}
+body main .page6 .marquee2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+body main .page6 .marquee2 .text2 {
+  display: flex;
+  gap: 2rem;
+  padding: 0 3rem;
+  animation: marquee 15s linear infinite both;
+}
+body main .page6 .marquee2 .text2 h1 {
+  white-space: nowrap;
+  font-family: "2hero";
+  font-size: 10rem;
+  overflow-x: auto;
+  color: #1A1A1A;
+}
+body main .page7 {
+  background-image: url(https://teaflowusa.com/cdn/shop/files/pexels-josh-sorenson-386148.jpg?v=1688150274&width=1600);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  color: white;
+}
+body main .page7 .blur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  background-color: rgba(26, 26, 26, 0.3607843137);
+}
+body main .page7 .blur h1 {
+  font-family: "2hero";
+  font-size: 2.75rem;
+  padding: 1rem 0;
+}
+body main .page7 .blur p {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  text-align: center;
+}
+body main .page7 .blur a {
+  color: white;
+}
+body main .page8 {
+  padding: 3rem 1rem;
+}
+body main .page8 h1 {
+  font-family: "2hero";
+}
+body main .page8 p {
+  padding: 1rem 0;
+}
+body main .page8 .container-8 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+body main .page8 .container-8 .elem h2 {
+  font-family: "2hero";
+}
+body main .page8 .container-8 .elem p {
+  line-height: 1.5;
+}
+body main .page8 .container-8 .elem h5 {
+  opacity: 60%;
+}
+body main .page8 .container-8 h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+body main .page9 {
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+body main .page9 h1 {
+  font-family: "2hero";
+  padding: 1rem 0;
+}
+body main .page9 p {
+  padding: 1rem 0;
+  text-align: center;
+  line-height: 1.5;
+}
+body main .page9 p a {
+  color: #1A1A1A;
+}
+body main .page9 form {
+  width: 100%;
+}
+body main .page9 form input {
+  margin: 0.5rem 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border: 0.5px solid rgba(40, 40, 40, 0.1137254902);
+  border-radius: 7px;
+}
+body main .page9 form input:focus {
+  border-color: #1A1A1A;
+  outline: none;
+}
+body main .page9 form button {
+  font-size: 1.1rem;
+  border: 0;
+  font-family: "2hero";
+  background-color: #1A1A1A;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 25px;
+  margin: 1rem 0;
+}
+body main footer {
+  padding: 2rem 1rem;
+}
+body main footer .part1 {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body main footer .part1 .elem {
+  width: 45%;
+  flex-shrink: 0;
+}
+body main footer .part1 .elem h4 {
+  padding: 1rem 0;
+  font-family: "2hero";
+}
+body main footer .part1 .elem p {
+  padding: 0.5rem 0;
+  opacity: 60%;
+  font-size: 0.9rem;
+}
+body main footer .part2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main footer .part2 .box1 .sicon {
+  padding: 1rem 0;
+}
+body main footer .part2 .box1 p {
+  font-size: 0.8rem;
+  opacity: 80%;
+}
+
+@media (min-width: 768px) {
+  body main {
+    position: relative;
+  }
+  body main nav .navbar {
+    padding: 0 2rem;
+  }
+  body main nav .navbar .elem {
+    width: 15%;
+  }
+  body main .page1 .container {
+    scroll-snap-type: y;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+  }
+  body main .page1 .container .showcase {
+    width: 55%;
+    aspect-ratio: 1/1;
+    background-color: red;
+    grid-area: x;
+    margin-left: auto;
+    position: sticky;
+    top: 100px;
+    z-index: 99;
+  }
+  body main .page1 .container .elem1 {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: row-reverse;
+  }
+  body main .page1 .container .elem1 .img {
+    width: 55%;
+  }
+  body main .page1 .container .elem1 .img img {
+    aspect-ratio: 1/1;
+  }
+  body main .page1 .container .elem1 .img-info {
+    width: 45%;
+  }
+  body main .page1 .container .elem1 .img-info h1 {
+    padding-top: 2rem;
+    font-size: 3rem;
+  }
+  body main .page1 .container .elem1 .img-info p {
+    font-size: 1rem;
+  }
+  body main .page2 {
+    aspect-ratio: 16/9;
+  }
+  body main .page2 .blur {
+    aspect-ratio: 16/9;
+    padding: 5rem 2rem;
+  }
+  body main .page2 .blur h1 {
+    font-size: 3rem;
+  }
+  body main .page2 .blur p {
+    font-size: 1rem;
+  }
+  body main .page3 {
+    padding: 2rem;
+    padding-top: 5rem;
+  }
+  body main .page3 h1 {
+    font-size: 2.5rem;
+  }
+  body main .page3 .container-3 .elem {
+    width: 40%;
+  }
+  body main .page4 h1 {
+    font-size: 7rem;
+    padding: 2rem;
+  }
+  body main .page4 .info {
+    padding: 1rem;
+  }
+  body main .page4 .info h1 {
+    font-size: 2.5rem;
+  }
+  body main .page4 .info .desc h4 {
+    padding: 1.5rem 0;
+  }
+  body main .page5 {
+    padding: 2rem;
+  }
+  body main .page5 .container-5 {
+    gap: 1.5rem;
+  }
+  body main .page7 .blur {
+    aspect-ratio: 1/0.8;
+    padding: 2rem;
+  }
+  body main .page7 .blur h1 {
+    font-size: 4rem;
+  }
+  body main .page7 .blur h5 {
+    font-size: 1.1rem;
+  }
+  body main .page8 {
+    padding: 4rem 2rem;
+  }
+  body main .page8 h1 {
+    font-size: 2.25rem;
+  }
+  body main .page8 .container-8 {
+    display: grid;
+    grid-template-areas: "a b c" "d d d";
+  }
+  body main .page8 .container-8 .elem:nth-child(1) {
+    grid-area: a;
+  }
+  body main .page8 .container-8 .elem:nth-child(2) {
+    grid-area: b;
+  }
+  body main .page8 .container-8 .elem:nth-child(3) {
+    grid-area: c;
+  }
+  body main .page8 .container-8 h1 {
+    grid-area: d;
+    font-size: 6rem;
+  }
+  body main .page8 .container-8 .elem h2 {
+    font-size: 2rem;
+  }
+  body main .page9 {
+    margin: 4rem 2rem;
+    border-radius: 25px;
+    padding: 2rem;
+  }
+  body main .page9 h1 {
+    font-size: 2.5rem;
+  }
+  body main .page9 form {
+    display: flex;
+    gap: 1rem;
+  }
+  body main .page9 form button {
+    width: 35%;
+  }
+  body main footer {
+    padding: 1rem 2rem;
+  }
+  body main footer .part1 {
+    gap: 5rem;
+  }
+  body main footer .part1 .elem {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body main footer .part2 .box1 .sicon {
+    font-size: 1.5rem;
+  }
+  body main footer .part2 .box2 {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body main nav .navbar {
+    padding: 0 3rem;
+  }
+  body main .page1 .container {
+    padding: 5rem 3rem;
+  }
+  body main .page2 .blur {
+    padding: 5rem 3rem;
+  }
+  body main .page2 .blur p:nth-child(3) {
+    width: 80%;
+  }
+  body main .page3 {
+    padding: 3rem;
+    padding-top: 4rem;
+  }
+  body main .page3 .container-3 .elem {
+    width: 23%;
+  }
+  body main .page3 .container-3 .elem p {
+    bottom: 12%;
+  }
+  body main .page4 {
+    padding: 0;
+    display: grid;
+    grid-template-areas: "c c c" "a a b";
+  }
+  body main .page4 h1 {
+    padding: 0;
+    font-size: 9rem;
+    grid-area: c;
+  }
+  body main .page4 .container-4 {
+    width: 100%;
+    padding: 3rem;
+    grid-area: a;
+    gap: 5rem;
+  }
+  body main .page4 .container-4 img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  body main .page4 .info {
+    grid-area: b;
+    padding-top: 2rem;
+    padding-right: 3rem;
+  }
+  body main .page5 {
+    padding: 1rem 3rem;
+  }
+  body main .page5 .container-5 {
+    padding: 2rem 0;
+  }
+  body main .page5 .container-5 .elem {
+    width: 31%;
+  }
+  body main .page7 .blur {
+    aspect-ratio: 16/9;
+  }
+  body main .page7 .blur p {
+    width: 77%;
+  }
+  body main .page8 {
+    padding: 4rem 3rem;
+  }
+  body main .page8 .container-8 h1 {
+    font-size: 8rem;
+  }
+  body main .page9 {
+    margin: 4rem 3rem;
+  }
+  body main .page9 p {
+    width: 90%;
+  }
+  body main .page9 form {
+    width: 50%;
+    padding: 1rem 0;
+  }
+  body main footer {
+    padding: 1rem 3rem;
+  }
+}/*# sourceMappingURL=style.css.map */

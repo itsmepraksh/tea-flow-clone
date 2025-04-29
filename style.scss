@@ -1,0 +1,883 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'heroTxt';
+    src: url(fonts/dinnext_n7.57888b0b2051a4dba7d02aad7ca64db99eca3cf1.woff2);
+}
+
+@font-face {
+    font-family: '2hero';
+    src: url(fonts/GolosText-Bold.woff2);
+}
+
+@font-face {
+    font-family: '3hero';
+    src: url(fonts/GolosText-Regular.woff2);
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: '3hero';
+    color: #1A1A1A;
+    main{
+        position: relative;
+        nav{
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 999;
+
+            .nav1{
+                background-color: #1A1A1A;
+                color: white;
+                padding: 1rem ;
+                text-align: center;
+                font-family: '2hero';
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+
+            .navbar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.5rem 1rem;
+                font-size: 1.4rem;
+                color: #1A1A1A;
+
+                i{
+                    font-size: 1.2rem;
+                }
+
+                div:nth-child(1){
+                    display: flex;
+                    gap: 1rem;
+
+                }
+
+                .elem{
+                    width: 30%;
+                     img{
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        object-fit: contain;
+
+                     }
+                }
+
+            }
+        }
+        
+        .menu{
+            // display:none;
+            width: 100%; 
+            z-index: 9999;
+            position: absolute;
+            padding: 0.5rem;
+            background-color: #1a1a1a62;
+            .inside-menu{
+                
+            padding: 1rem;
+            background-color: rgb(255, 255, 255);
+
+                .menu-list{
+                    .items{
+                        font-family: '2hero';
+                        font-size: 1.5rem;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+
+        .page1{
+            .container{
+                display: flex;
+                overflow-x: scroll;   
+                gap: 1rem;
+                padding: 3rem 1rem;
+                
+                .elem1{ 
+                    width: 80%;
+                    flex-shrink: 0; 
+                    .img{
+                        width: 100%;
+                        img{ 
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        
+                        border-radius: 0.5rem;
+                        }
+                    }
+                    .img-info{
+                        h1{
+                            padding: 1rem 0;
+                            font-family: '2hero';
+                            font-size: 2.5rem;
+                        }
+                        p{
+                            font-family: '3hero';
+                            letter-spacing: 0.4px;
+                            font-size: 0.8rem;
+                            line-height: 1.75;
+                            padding-bottom:1rem ;
+                        }
+                        a{
+                            color: #1A1A1A;
+                            font-size: 0.9rem;
+                            font-family: '3hero';
+                        }
+                    }
+                    
+                }
+            }
+
+            .container::-webkit-scrollbar{
+                display: none;
+            }
+        }
+
+        .page2{
+            aspect-ratio: 1/1;
+            width: 100%;
+            background-image: url(https://teaflowusa.com/cdn/shop/files/quiz_banner.jpg?v=1694097176&width=2200);
+            background-size: cover;
+            background-position: center;
+            color: white;
+
+            .blur{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 2rem 1rem;
+                background-color: #1a1a1a47;
+                h1{
+                    font-family: '2hero';
+                    font-size: 2.5rem;
+                    padding-top: 2rem;
+
+                }
+                p{
+                    font-family: '3hero';
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                }
+                .imp{
+                    font-family: '2hero'; 
+                }
+
+                .btn{
+                    background-color: #1A1A1A;
+                    width: fit-content;
+                    padding: 1rem 2rem;
+                    border-radius: 25px;
+                    margin: 1rem 0;
+                    margin-bottom: 4rem;
+                    font-weight: 700;
+                }
+            }
+
+            
+        }
+
+        .page3{
+            h1{
+                font-family: '2hero';
+                padding: 3rem 1rem ;
+            }
+            p{
+               
+            padding: 0 1rem ;
+                font-family: '3hero';
+            }
+            .container-3{
+                width: 100%;
+                display: flex;
+                overflow-x: scroll;
+                white-space: nowrap;
+                gap: 1rem;
+                padding: 1rem;
+                z-index: 99;
+                .elem{
+                    position: relative;
+                    flex-shrink: 0;
+                    display: flex ;
+                    justify-content: center;
+                    width: 85%;
+                    aspect-ratio: 1/1; 
+                    img{
+                        width: 100%;
+                        border-radius: 10px;
+                        aspect-ratio: 1/1; 
+                    }
+                     
+                    p{ 
+                        color: white;
+                        font-family: '2hero';
+                        font-size: 1.2rem;
+                        position: absolute;
+                        bottom: 0;
+
+                    }
+                }
+            }
+
+            .container-3::-webkit-scrollbar{
+                display: none;
+            }
+        }
+
+        .page4{
+            h1{
+                font-family: '2hero';
+                font-size: 4rem;
+                text-align: center;
+                padding:1rem 2rem ;
+            }
+            .container-4{
+                display: flex;
+                gap: 1rem;
+                overflow-x: auto;
+                
+            padding: 1rem;
+
+                img{
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            .container-4::-webkit-scrollbar{
+                display: none;
+            }
+
+            .info{
+                padding: 1rem;
+                p{
+                    font-family: '3hero';
+                    padding: 1rem 0;
+                }
+                h1{
+                    text-align: left;
+                    font-family: '2hero';
+                    font-size: 2rem;
+                    padding: 0;
+                }
+
+                .desc{
+                    h4{
+                        font-family: '2hero';
+                        padding: 1rem 0;
+                    }
+
+                    p{
+                        margin: 2rem 0;
+                        color: white;
+                        text-align: center;
+                        background-color: #1A1A1A;
+                        border-radius: 25px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .page5{
+            padding: 1rem;
+            h4{
+                padding: 1rem 0;
+                font-family: '3hero';
+                font-weight: 500;
+            }
+
+            .container-5{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                
+                .elem{
+                    flex-shrink: 0;
+                    font-family: '3hero';
+                    padding: 0.5rem 0;
+                    width: 47%;
+                    img{
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        border-radius: 10px;
+                    }
+                    h2{
+                        font-family: '2hero';
+                        font-size: 0.9rem;
+                        font-weight: 900;
+                        padding: 0.5rem 0;
+                    } 
+                    p{
+                        padding: 0.5rem 0;
+                        font-size: 0.9rem;
+                    }
+                    
+                }
+            }
+        }
+
+@keyframes marquee {
+    
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@mixin marqei-h1{
+     
+    white-space: nowrap;
+    font-family: '2hero';
+    font-size: 10rem;
+    overflow-x: auto;
+    color: #1A1A1A;
+    
+}
+
+        .page6{
+            padding: 2rem 0; 
+            .marquee{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+
+                .text{ 
+                    display: flex;
+                    gap: 2rem; 
+                    padding: 0 3rem;
+                    animation: marquee 8s linear infinite both ;
+
+                    h1{
+                        @include marqei-h1;
+                    }
+
+                }
+
+            }
+            .marquee2{
+                
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                
+                .text2{
+                    display: flex;
+                    gap: 2rem; 
+                    padding: 0 3rem;
+                     animation: marquee 15s linear infinite both ; 
+                    
+
+                    h1{
+                        @include marqei-h1;
+                    }
+
+                }
+            }
+        }
+
+        .page7{
+            background-image: url(https://teaflowusa.com/cdn/shop/files/pexels-josh-sorenson-386148.jpg?v=1688150274&width=1600);
+            background-size:cover ;
+            background-position: center;
+            width: 100%; 
+            color: white;
+
+            .blur{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 4rem 2rem;
+                width: 100%;  
+                aspect-ratio: 1/1.5;
+                background-color: #1a1a1a5c;
+                
+            h1{
+                font-family: '2hero';
+                font-size: 2.75rem;
+                padding: 1rem 0;
+            }
+
+            p{
+                padding: 1rem 0;
+                font-size: 0.9rem;
+                line-height: 1.75; 
+                text-align: center;
+            }
+            a{
+                color: white;
+            }
+            }
+
+        }
+        
+        .page8{
+            padding: 3rem 1rem;
+
+            h1{
+                font-family: '2hero';
+            }
+            p{
+                padding: 1rem 0;
+            }
+            .container-8{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 1rem 0;
+                .elem{
+                    h2{
+                        font-family: '2hero';   
+                    }
+                    p{
+                        line-height: 1.5; 
+                    }
+                    h5{
+                        opacity: 60%;
+                    }
+                }
+
+                h1{
+                    font-size: 4rem;
+                    text-align: center;
+                    padding: 2rem 0;
+                }
+            }
+        }
+
+        .page9{
+            background-color: rgb(234, 234, 234);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.25rem ;
+            h1{
+                font-family: '2hero';
+                padding: 1rem 0;
+            }
+            p{
+                padding: 1rem 0;
+                text-align: center;
+                line-height: 1.5;
+                a{
+                    color: #1A1A1A;
+                }
+            }
+
+            form{
+                width: 100%;
+                input{
+                    margin: 0.5rem 0;
+                    width: 100%;
+                    padding:1rem;
+                    background-color: transparent;
+                    border: 0.5px solid #2828281d;
+                    border-radius: 7px;
+                }
+
+                input:focus{
+                    border-color: #1A1A1A;
+                    outline: none;
+                }
+                button{
+                    font-size: 1.1rem;
+                    border: 0;
+                    font-family: '2hero';
+                    background-color: #1A1A1A;
+                    color: white;
+                    padding: 1rem;
+                    width: 100%;
+                    border-radius: 25px;
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        footer{
+            padding: 2rem 1rem;
+
+            .part1{
+                padding: 1rem 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                .elem{
+                    width: 45%;
+                    flex-shrink: 0;
+                    h4{
+                        padding: 1rem 0; 
+                        font-family: '2hero';
+                    }
+                    p{
+                        padding: 0.5rem 0;
+                        opacity: 60%;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .part2{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .box1{
+                    .sicon{
+                    padding: 1rem 0;
+                    }
+                    p{
+                        font-size: 0.8rem;
+                        opacity: 80%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    body{
+        main{
+            position: relative;
+            nav{
+                .navbar{
+                    padding:0 2rem;
+
+                    .elem{
+                        width: 15%;
+                    }
+                }
+            }
+            .page1{
+                .container{
+                    scroll-snap-type: y;
+                    position: relative; 
+ 
+
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5rem 2rem;
+
+                    .showcase{
+                        width: 55%;
+                        aspect-ratio: 1/1;
+                        background-color: red;
+                        grid-area: x;  
+                        margin-left:auto ;
+                        position: sticky; 
+                        top: 100px;
+                        z-index: 99; 
+                    }
+
+                    
+                       
+                    .elem1{
+                        width: 100%;
+                        display: flex;
+                        gap: 1.5rem;
+                        flex-direction: row-reverse;
+                        .img{  
+                            width: 55%; 
+                            img{
+                                aspect-ratio: 1/1;
+                                // opacity: 0; 
+                            }
+                        }
+                        .img-info{
+                            width: 45%;
+                            h1{
+                                padding-top: 2rem;
+                                font-size: 3rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+
+                } 
+                  
+                
+                  
+                 
+                   
+                  
+            }
+            .page2{
+                aspect-ratio: 16/9;
+                .blur{
+                    
+                    aspect-ratio: 16/9;
+                    padding: 5rem 2rem;
+                    h1{
+                        font-size: 3rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .page3{
+                padding: 2rem;
+                padding-top: 5rem; 
+                h1{
+                    font-size: 2.5rem;
+                }
+
+                .container-3{
+                    .elem{
+                        width: 40%;
+                    }
+                }
+            }
+            .page4{
+                h1{
+                    font-size: 7rem;
+                    padding: 2rem;
+                }
+                .info{
+                    padding: 1rem;
+                    h1{
+                        font-size: 2.5rem;
+                    }
+                    .desc{
+                        h4{
+                            padding: 1.5rem 0;
+                        }
+                    }
+                }
+            }
+            .page5{
+                padding: 2rem;
+
+               .container-5{
+                gap: 1.5rem;
+                
+               }
+            }
+            .page7{
+                .blur{
+                    aspect-ratio: 1/0.8;
+                    padding: 2rem;
+
+                    h1{
+                        font-size: 4rem;
+                    }
+                    h5{
+                       font-size: 1.1rem; 
+                    }
+                }
+            }
+            .page8{
+                padding: 4rem 2rem;
+
+                h1{
+                    font-size: 2.25rem;
+                }
+                .container-8{
+                    display: grid;
+                    
+
+                    .elem:nth-child(1){
+                        grid-area: a;
+                    }.elem:nth-child(2){
+                        grid-area: b;
+                    }.elem:nth-child(3){
+                        grid-area: c;
+                    }
+                    h1{
+                        grid-area: d;
+                        font-size: 6rem;
+                    }
+
+                    grid-template-areas: 
+                        "a b c"
+                        "d d d"
+                    ;
+
+
+                    .elem{
+                        
+                        h2{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            .page9{
+                margin: 4rem 2rem;
+                border-radius: 25px;
+                padding: 2rem;
+
+                h1{
+                    font-size: 2.5rem;
+                }
+
+                form{ 
+                    display: flex;
+                    gap: 1rem;
+                    
+                    button{
+                        width: 35%;
+                    }
+                }
+            }
+            footer{
+                padding: 1rem 2rem;
+                .part1{ 
+                    gap: 5rem;
+                    .elem{
+                        width: fit-content;
+
+                    }
+                }
+                .part2{
+                    .box1{
+                        .sicon{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .box2{
+                        display: flex;
+                        gap: 1rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1024px) {
+    body{
+        main{
+            nav{
+                .navbar{
+                    padding: 0 3rem;
+                }
+            }
+
+            .page1{
+                .container{
+                    padding: 5rem 3rem;
+                }
+            }
+            .page2{ 
+                .blur{
+                    padding: 5rem 3rem;
+
+                    p:nth-child(3){
+                        width: 80%; 
+                    }
+                }
+            }
+            .page3{
+                padding: 3rem;
+                padding-top:4rem ;
+
+                .container-3{
+                    .elem{
+                        width: 23%;
+
+                        p{
+                            bottom: 12%;
+                        }
+                    }
+                }
+
+            }
+            .page4{
+                padding: 0; 
+                display: grid; 
+                grid-template-areas: 
+                    "c c c"
+                    "a a b"
+                ;
+
+
+                h1{
+                    padding: 0; 
+                    font-size: 9rem;
+                    grid-area:c ;
+                }
+                .container-4{
+                    width: 100%;
+                    padding: 3rem;
+                    grid-area: a; 
+                    gap: 5rem;
+                    img{
+                        width: 100%;
+                        border-radius: 20px;
+
+                    }
+                }
+                .info{
+                    grid-area: b;
+                    padding-top: 2rem;
+                    padding-right: 3rem;
+                }
+            }
+            .page5{
+                padding: 1rem 3rem;
+                .container-5{
+                    padding: 2rem 0;
+                    .elem{
+                        width: 31%;
+                    }
+                }
+            }
+            .page7{
+                .blur{
+                    aspect-ratio: 16/9;
+                    p{
+                        width: 77%;
+                    }
+                }
+            }
+            .page8{
+                padding: 4rem 3rem;
+
+                .container-8{
+                    h1{
+                        font-size: 8rem;
+                    }
+                }
+            }
+            .page9{
+                margin: 4rem 3rem;
+                p{
+                    width: 90%;
+                }
+                form{
+                    width: 50%;
+                    padding: 1rem 0;
+                }
+            }
+            footer{
+                padding: 1rem 3rem;
+            }
+            
+            
+             
+        }
+    }
+}
