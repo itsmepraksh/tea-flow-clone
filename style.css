@@ -29,12 +29,13 @@ body main {
   position: relative;
 }
 body main nav {
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
-  background-color: white;
   z-index: 999;
 }
 body main nav .nav1 {
+  width: 100%;
   background-color: #1A1A1A;
   color: white;
   padding: 1rem;
@@ -45,9 +46,11 @@ body main nav .nav1 {
   font-weight: 500;
 }
 body main nav .navbar {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
   color: #1A1A1A;
@@ -84,43 +87,62 @@ body main .menu .inside-menu .menu-list .items {
   font-size: 1.5rem;
   padding: 1rem;
 }
-body main .page1 .container {
+body main .page1 {
   display: flex;
-  overflow-x: scroll;
+  flex-direction: column-reverse;
+  overflow-x: auto;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  padding: 10rem 5rem;
+  margin: 1rem;
+}
+body main .page1 .left-part {
+  display: flex;
   gap: 1rem;
-  padding: 3rem 1rem;
 }
-body main .page1 .container .elem1 {
-  width: 80%;
+body main .page1 .left-part .img-info {
+  min-width: 200px;
+  max-width: 350px;
+  scroll-snap-align: start;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
 }
-body main .page1 .container .elem1 .img {
-  width: 100%;
-}
-body main .page1 .container .elem1 .img img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 0.5rem;
-}
-body main .page1 .container .elem1 .img-info h1 {
+body main .page1 .left-part .img-info h1 {
+  width: 90%;
   padding: 1rem 0;
   font-family: "2hero";
   font-size: 2.5rem;
 }
-body main .page1 .container .elem1 .img-info p {
+body main .page1 .left-part .img-info p {
+  width: 90%;
   font-family: "3hero";
   letter-spacing: 0.4px;
   font-size: 0.8rem;
   line-height: 1.75;
   padding-bottom: 1rem;
 }
-body main .page1 .container .elem1 .img-info a {
+body main .page1 .left-part .img-info a {
   color: #1A1A1A;
   font-size: 0.9rem;
   font-family: "3hero";
 }
-body main .page1 .container::-webkit-scrollbar {
-  display: none;
+body main .page1 .right-part {
+  width: 100%;
+}
+body main .page1 .right-part .images {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+body main .page1 .right-part .images img {
+  border-radius: 0.5rem;
+  min-width: 200px;
+  max-width: 330px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
 }
 body main .page2 {
   aspect-ratio: 1/1;
@@ -473,49 +495,53 @@ body main footer .part2 .box1 p {
     position: relative;
   }
   body main nav .navbar {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
   body main nav .navbar .elem {
     width: 15%;
   }
-  body main .page1 .container {
-    scroll-snap-type: y;
-    position: relative;
+  body main .page1 {
     display: flex;
-    flex-direction: column;
-    padding: 5rem 2rem;
-  }
-  body main .page1 .container .showcase {
-    width: 55%;
-    aspect-ratio: 1/1;
-    background-color: red;
-    grid-area: x;
-    margin-left: auto;
-    position: sticky;
-    top: 100px;
-    z-index: 99;
-  }
-  body main .page1 .container .elem1 {
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    height: 100vh;
+    padding: 0 2rem;
+    margin: 0;
+    margin-top: 20vw;
+  }
+  body main .page1 .left-part {
+    display: block;
+    overflow: hidden;
+    width: 40%;
+    height: inherit;
+    padding: 15rem 0;
+  }
+  body main .page1 .left-part .img-info {
+    width: 100%;
+    height: inherit;
+    display: block;
+  }
+  body main .page1 .right-part {
+    width: 60%;
+    height: inherit;
     display: flex;
-    gap: 1.5rem;
-    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
   }
-  body main .page1 .container .elem1 .img {
-    width: 55%;
+  body main .page1 .right-part .images {
+    width: 90%;
+    height: 80%;
+    display: block;
   }
-  body main .page1 .container .elem1 .img img {
-    aspect-ratio: 1/1;
-  }
-  body main .page1 .container .elem1 .img-info {
-    width: 45%;
-  }
-  body main .page1 .container .elem1 .img-info h1 {
-    padding-top: 2rem;
-    font-size: 3rem;
-  }
-  body main .page1 .container .elem1 .img-info p {
-    font-size: 1rem;
+  body main .page1 .right-part .images img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0.5rem;
   }
   body main .page2 {
     aspect-ratio: 16/9;
@@ -633,11 +659,31 @@ body main footer .part2 .box1 p {
   body main nav .navbar {
     padding: 0 3rem;
   }
-  body main .page1 .container {
-    padding: 5rem 3rem;
+  body main nav .navbar .elem img {
+    padding: 1rem 0;
+    aspect-ratio: 1/0.25;
+  }
+  body main .page1 .left-part {
+    width: 45%;
+    padding-left: 3rem;
+  }
+  body main .page1 .left-part .img-info h1 {
+    width: 100%;
+    font-size: 3.5rem;
+  }
+  body main .page1 .right-part {
+    width: 50%;
+    padding-right: 3rem;
   }
   body main .page2 .blur {
+    justify-content: center;
     padding: 5rem 3rem;
+  }
+  body main .page2 .blur h1 {
+    font-size: 5rem;
+  }
+  body main .page2 .blur p {
+    font-size: 1.5rem;
   }
   body main .page2 .blur p:nth-child(3) {
     width: 80%;
@@ -670,7 +716,10 @@ body main footer .part2 .box1 p {
   }
   body main .page4 .container-4 img {
     width: 100%;
+    aspect-ratio: 1/0.7;
     border-radius: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   body main .page4 .info {
     grid-area: b;
@@ -684,13 +733,19 @@ body main footer .part2 .box1 p {
     padding: 2rem 0;
   }
   body main .page5 .container-5 .elem {
-    width: 31%;
+    width: 30%;
+  }
+  body main .page6 {
+    padding-bottom: 6rem;
   }
   body main .page7 .blur {
     aspect-ratio: 16/9;
   }
+  body main .page7 .blur h1 {
+    font-size: 4.5rem;
+  }
   body main .page7 .blur p {
-    width: 77%;
+    width: 50%;
   }
   body main .page8 {
     padding: 4rem 3rem;
